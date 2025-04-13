@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Comparator - Multi-Tools</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/tools.css">
+    <style>
+        .comparison-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .image-wrapper {
+            display: flex;
+            width: 100%;
+        }
+        .image-container {
+            flex: 1;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .slider {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #fff;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: ew-resize;
+            z-index: 10;
+        }
+        .slider-handle {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main class="container py-4">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="h4 mb-0">Image Comparator</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="image1Input" class="form-label">First Image</label>
+                                <input type="file" id="image1Input" class="form-control" accept="image/*">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="image2Input" class="form-label">Second Image</label>
+                                <input type="file" id="image2Input" class="form-control" accept="image/*">
+                            </div>
+                        </div>
+                        <div class="comparison-container mb-3">
+                            <div class="image-wrapper">
+                                <div class="image-container">
+                                    <img id="image1Preview" class="img-fluid">
+                                </div>
+                                <div class="image-container">
+                                    <img id="image2Preview" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="slider">
+                                <div class="slider-handle">
+                                    <i class="fas fa-arrows-alt-h"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="comparisonSlider" class="form-label">Comparison Slider</label>
+                            <input type="range" class="form-range" id="comparisonSlider" min="0" max="100" value="50">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="ad-container mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="text-center text-muted">Advertisement</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script src="image-comparator.js"></script>
+</body>
+</html>

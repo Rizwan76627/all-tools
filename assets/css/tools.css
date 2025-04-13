@@ -1,0 +1,39 @@
+.tool-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.results {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.results h5 {
+    color: #6c757d;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.results p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin: 0;
+}
+
+.ad-container {
+    min-height: 250px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .results .row > div {
+        margin-bottom: 1rem;
+    }
+}
